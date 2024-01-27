@@ -76,19 +76,27 @@ const index = () => {
   console.log("my address", displayCurrentAddress);
   return (
     <ScrollView style={{flex: 1,backgroundColor:"#f8f8f8"}}>
-      <View>
-      <Octicons name="location" size={24} color="black" />
-      <View>
-        <Text>Deliver To</Text>
-        <Text>{displayCurrentAddress}</Text>
+      <View style = {{flexDirection:"row",alignItems:"center",gap:12,padding:10}}>
+      <Octicons name="location" size={24} color="#E52850" />
+      <View style={{flex:1}}>
+        <Text style={{fontSize:15,fontWeight:"500"}}>Deliver To</Text>
+        <Text style={{color:"grey",fontSize:16,marginTop:3}}>{displayCurrentAddress}</Text>
       </View>
-      <Pressable style={{backgroundColor: "#6CB4EE",width:40,height:40,borderRadius:20,justifyContent:"center",alignItems:"center"}}>
+      <Pressable style={{
+      backgroundColor: "#6CB4EE",
+      width:40,
+      height:40,
+      borderRadius:20,
+      justifyContent:"center",
+      alignItems:"center"
+      }}>
         <Text>S</Text>
       </Pressable>
       </View>
       </ScrollView>
   )
 }
+
 
 export default index
 
